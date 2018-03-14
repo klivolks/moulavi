@@ -16,10 +16,33 @@
 				$load->view('public/meta');
 				$load->view('public/header');
 				$load->view('public/sidebar');
+				$load->view('public/dashboard');
 				$load->view('public/sub-footer');
 				$load->view('public/footer');
 			}
+			elseif($subpage=='admins'){
+				if($param[3]==''){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/all-admin');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+				elseif($param[3]=='add'){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/add-admin');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+			}
 		}
+		
+		
+		
+		
 		else{
 			redirect('/');
 		}
