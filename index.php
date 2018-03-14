@@ -6,6 +6,6 @@ include( 'settings/class_lib.php' );
 $link = $_SERVER[ 'REQUEST_URI' ];
 $param = explode( '/', $link );
 $plugin = $param[ 1 ];
-include('controller.php');
 include('settings/modal.php');
+include('controller.php');
 ?>

@@ -5,6 +5,6 @@
 $host = "localhost";
 $user = "root";
 $password = "iamadventurer";
-$database = "tylos";
+$database = "moulavi";
 
 ?>
