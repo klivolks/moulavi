@@ -38,6 +38,24 @@
 					$load->view('public/footer');
 				}
 			}
+			elseif($subpage=='clients'){
+				if($param[3]==''){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/all-clients');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+				elseif($param[3]=='add'){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/add-client');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+			}
 		}
 		
 		
