@@ -1,6 +1,6 @@
 <?php
-include('functions.php');
+include($_SERVER["DOCUMENT_ROOT"] .'/functions.php');
 if($param[1]=='functions'){
 	$function = $param[2];
-	include('modal.php');
+	include($_SERVER["DOCUMENT_ROOT"] .'/modal.php');
 }
