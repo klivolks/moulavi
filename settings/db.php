@@ -2,7 +2,7 @@
 class db{
 	function connect(){
 		date_default_timezone_set('Asia/Kolkata');
-		include('database.php');
+		include($_SERVER["DOCUMENT_ROOT"] .'/database.php');
 		$con=mysqli_connect($host,$user,$password,$database);
 		return $con;
 	}
