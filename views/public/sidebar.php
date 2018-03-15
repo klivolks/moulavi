@@ -46,7 +46,11 @@
                                 <li><a href="/app/clients/">All Clients</a></li>
                                 <li><a href="/app/clients/add/">Add Client</a></li>
                             </ul>
-                        </li>
+                        </li> <li> <a class="has-arrow waves-effect waves-dark" href="/app/clients/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Visa</span></a>
+                         <ul aria-expanded="false" class="collapse">
+                                <li><a href="/app/visa/">All Visa</a></li>
+                                <li><a href="/app/visa/add/">Add Visa</a></li>
+                            </ul>
                         <li class="nav-small-cap">SETTINGS</li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="/app/admins/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Admins</span></a>
                             <ul aria-expanded="false" class="collapse">

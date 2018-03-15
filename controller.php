@@ -56,6 +56,24 @@
 					$load->view('public/footer');
 				}
 			}
+			elseif($subpage=='visa'){
+				if($param[3]==''){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/all-visa');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+				elseif($param[3]=='add'){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/add-visa');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+			}
 		}
 		
 		
