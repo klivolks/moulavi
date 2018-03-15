@@ -46,11 +46,29 @@
                                 <li><a href="/app/clients/">All Clients</a></li>
                                 <li><a href="/app/clients/add/">Add Client</a></li>
                             </ul>
-                        </li> <li> <a class="has-arrow waves-effect waves-dark" href="/app/clients/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Visa</span></a>
+                        </li> 
+                        <li> <a class="has-arrow waves-effect waves-dark" href="/app/visa/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Visa</span></a>
                          <ul aria-expanded="false" class="collapse">
                                 <li><a href="/app/visa/">All Visa</a></li>
                                 <li><a href="/app/visa/add/">Add Visa</a></li>
-                            </ul>
+                                <li><a href="/app/visa/addst/">Attestation</a></li>
+                            </ul></li>
+                            
+                            
+                            <li> <a class="has-arrow waves-effect waves-dark" href="/app/ticketing/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Ticketing</span></a>
+                         <ul aria-expanded="false" class="collapse">
+                                <li><a href="/app/ticketing/">All Ticketing</a></li>
+                                <li><a href="/app/ticketing/add/">Add Ticketing</a></li>
+                            </ul></li>
+                            
+                               <li> <a class="has-arrow waves-effect waves-dark" href="/app/tour-packages/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Tour-packages</span></a>
+                         <ul aria-expanded="false" class="collapse">
+                                <li><a href="/app/tour-packages/">All packages</a></li>
+                                <li><a href="/app/tour-packages/add/">Add packages</a></li>
+                            </ul></li>
+                            
+                            
+                            
                         <li class="nav-small-cap">SETTINGS</li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="/app/admins/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Admins</span></a>
                             <ul aria-expanded="false" class="collapse">

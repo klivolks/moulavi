@@ -73,7 +73,54 @@
 					$load->view('public/sub-footer');
 					$load->view('public/footer');
 				}
+				elseif($param[3]=='addst'){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/attestation');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
 			}
+					elseif($subpage=='ticketing'){
+				if($param[3]==''){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/all-ticketing');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+				elseif($param[3]=='add'){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/add-ticketing');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+			}
+			
+			elseif($subpage=='tour-packages'){
+				if($param[3]==''){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/all-packages');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+				elseif($param[3]=='add'){
+					$load->view('public/meta');
+					$load->view('public/header');
+					$load->view('public/sidebar');
+					$load->view('public/add-packages');
+					$load->view('public/sub-footer');
+					$load->view('public/footer');
+				}
+			}
+				
+			
 		}
 		
 		

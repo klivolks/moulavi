@@ -89,7 +89,7 @@
                                               <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">DOB</label>
-                                            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="DOBt">
+                                            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="DOB">
                                         </div>
                                         </div>
                                          <div class="form-group col-md-6 m-t-20" style="margin:0px">
