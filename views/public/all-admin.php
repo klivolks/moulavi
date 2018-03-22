@@ -50,30 +50,25 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                           <?php
+											$db = new db;
+											$data = $db->get('users','*',"WHERE 1 ORDER BY id DESC");
+											$i=1;
+											foreach($data['result'] as $key => $rw):
+											?>
                                             <tr>
-                                                <td><a href="javascript:void(0)">1</a></td>
-                                                <td>Herman Beck</td>
-                                                <td>jkasdjkh@domain.com </td>
+                                                <td><a href="javascript:void(0)"><?php echo $i; $i++; ?></a></td>
+                                                <td><?php echo $rw['username']; ?></td>
+                                                <td><?php echo $rw['email']; ?> </td>
                                                 <td>  <button class="pull-right btn btn-sm btn-rounded btn-success" data-toggle="modal" data-target="#myModal" style="    margin: 0px 10px 0px 0px;background-color: red;
     border-color: red;
     padding: 10px 25px 10px 25px;">Block</button></td>
                                                
                                                
                                              
-                                            </tr>
-                                            <tr>
-                                                <td><a href="javascript:void(0)">2</a></td>
-                                                <td>Mary Adams</td>
-                                                <td>jkasdjkh@domain.com</td>
-                                                <td>  <button class="pull-right btn btn-sm btn-rounded btn-success" data-toggle="modal" data-target="#myModal" style="    margin: 0px 10px 0px 0px;background-color: red;
-    border-color: red;
-    padding: 10px 25px 10px 25px;">Block</button></td>
-                                             
-                                              
-                                               
-                                            </tr>
+											</tr>
                                         
-                                            
+                                            <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                      

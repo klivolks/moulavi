@@ -42,6 +42,7 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
+                                               <th>#</th>
                                                 <th>Type</th>
                                                 <th>Name</th>
                                                 <th>Address</th>
@@ -52,35 +53,32 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                           <?php
+											$db = new db;
+											$data = $db->get('clients','*',"WHERE 1 ORDER BY `id` DESC");
+											$i=1;
+											foreach($data['result'] as $key=>$rw):
+											?>
                                             <tr>
-                                                <td>B2B</td>
-                                                <td>Herman Beck</td>
-                                                <td>jkasdjkh@domain.com </td>
-                                                 <td>Mary Adams</td>
-                                                <td>jkasdjkh@domain.com</td>
+                                               <td><?php echo $i; $i++; ?></td>
+                                                <td><?php echo $rw['client_type']; ?></td>
+                                                <td><?php echo $rw['client_name']; ?></td>
+                                                <td><?php echo $rw['client_address']; ?> </td>
+                                                 <td><?php echo $rw['client_phone']; ?></td>
+                                                <td><?php echo $rw['client_email']; ?></td>
                                                
                                                
                                              
                                             </tr>
-                                            <tr>
-                                                <td>B2C</td>
-                                                <td>Mary Adams</td>
-                                                <td>jkasdjkh@domain.com</td>
-                                                <td>Mary Adams</td>
-                                                <td>jkasdjkh@domain.com</td>
-                                             
-                                              
-                                               
-                                            </tr>
+                                            <?php
+											endforeach;
+											?>
+                                            
                                         
                                             
                                         </tbody>
                                         
                                     </table>
-                                     
-                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
-                                
                                 </div>
                             </div>
                         </div>

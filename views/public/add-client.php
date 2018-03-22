@@ -36,38 +36,36 @@
                             <p class="text-muted m-b-30 font-13">  </p>
                             <div class="row">
                                 <div class="col-sm-12 col-xs-12">
-                                    <form>
+                                    <form method="post" action="/functions/insert/client/">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Type</label>
-                                           <select class="custom-select col-12" id="inlineFormCustomSelect">
-                                        <option selected="">Choose...
-                                        </option><option value="1">B2B                                        </option><option value="2">B2C
-                                        </option><option value="3">B2D
-                                    </option></select>
+                                           <select class="custom-select col-12" id="inlineFormCustomSelect" name="client_type" required>
+                                        <option selected="" disabled>Choose...
+                                        </option><option value="B2B">B2B                                        </option><option value="B2C">B2C
+                                        </option></select>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Name</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name" required name="client_name">
                                         </div>
                                            <div class="form-group">
                                             <label for="exampleInputEmail1">Address</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Address">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Address" required name="client_address">
                                         </div>
                                                                                    <div class="form-group">
                                             <label for="exampleInputEmail1">Phone</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="phone">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="phone" required name="client_phone">
                                         </div>
                                        
                                        <div class="form-group">
                                             <label for="exampleInputEmail1">E-mail</label>
-                                            <input type="e-mail" class="form-control" id="exampleInputEmail1" placeholder="e-mail">
+                                            <input type="e-mail" class="form-control" id="exampleInputEmail1" placeholder="e-mail" required name="client_email">
                                         </div>
                                        
 
                                        
                                         
                                         <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                                     </form>
                                 </div>
                             </div>

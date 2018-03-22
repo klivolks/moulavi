@@ -4,7 +4,7 @@
 
 $host = "localhost";
 $user = "root";
-$password = "";
+$password = "iamadventurer";
 $database = "moulavi";
 
 ?>

@@ -41,13 +41,14 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="/app/" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
                         <li class="nav-small-cap">USER MANAGEMENT</li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="/app/clients/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Clients</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Clients</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="/app/clients/">All Clients</a></li>
                                 <li><a href="/app/clients/add/">Add Client</a></li>
                             </ul>
                         </li> 
-                        <li> <a class="has-arrow waves-effect waves-dark" href="/app/visa/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Visa</span></a>
+                        <li class="nav-small-cap">TRAVEL MANAGEMENT</li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Visa</span></a>
                          <ul aria-expanded="false" class="collapse">
                                 <li><a href="/app/visa/">All Visa</a></li>
                                 <li><a href="/app/visa/add/">Add Visa</a></li>
@@ -55,13 +56,13 @@
                             </ul></li>
                             
                             
-                            <li> <a class="has-arrow waves-effect waves-dark" href="/app/ticketing/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Ticketing</span></a>
+                            <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Ticketing</span></a>
                          <ul aria-expanded="false" class="collapse">
                                 <li><a href="/app/ticketing/">All Ticketing</a></li>
                                 <li><a href="/app/ticketing/add/">Add Ticketing</a></li>
                             </ul></li>
                             
-                               <li> <a class="has-arrow waves-effect waves-dark" href="/app/tour-packages/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Tour-packages</span></a>
+                               <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Tour-packages</span></a>
                          <ul aria-expanded="false" class="collapse">
                                 <li><a href="/app/tour-packages/">All packages</a></li>
                                 <li><a href="/app/tour-packages/add/">Add packages</a></li>
@@ -70,7 +71,7 @@
                             
                             
                         <li class="nav-small-cap">SETTINGS</li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="/app/admins/" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Admins</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Admins</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="/app/admins/">All Admins</a></li>
                                 <li><a href="/app/admins/add/">Add Admins</a></li>

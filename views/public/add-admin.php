@@ -36,23 +36,26 @@
                             <p class="text-muted m-b-30 font-13">  </p>
                             <div class="row">
                                 <div class="col-sm-12 col-xs-12">
-                                    <form>
+                                    <form method="post" action="/functions/insert/admin/">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">User Name</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="User Name">
+                                            <input type="text" class="form-control" name="username" id="exampleInputEmail1" placeholder="User Name" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputEmail1" placeholder="password">
+                                            <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="password" required>
+                                        </div>
+                                          <div class="form-group">
+                                            <label for="exampleInputEmail1">Retype Password</label>
+                                            <input type="password" class="form-control" name="retype_password" id="exampleInputEmail1" placeholder="password" required>
                                         </div>
                                            <div class="form-group">
                                             <label for="exampleInputEmail1">E-mail</label>
-                                            <input type="password" class="form-control" id="exampleInputEmail1" placeholder="e-mail">
+                                            <input type="text" class="form-control" name="email" id="exampleInputEmail1" placeholder="e-mail" required>
                                         </div>
                                        
                                         
                                         <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                                     </form>
                                 </div>
                             </div>

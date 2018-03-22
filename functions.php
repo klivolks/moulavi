@@ -35,4 +35,27 @@ function session_check(){
 		return false;
 	}
 }
+function insert_admin(){
+	$db = new db;
+	$input = new input;
+	if($input->post('password')==$input->post('retype_password')){
+		$data = array('username'=>$input->post('username'), 'password'=>sha1($input->post('password')), 'email'=>$input->post('email'), 'status'=>1);
+		$id=$db->insert('users',$data);
+		redirect('/app/admins/');
+	}
+	else{
+		redirect('/app/admin/add/?msg=passwords-doesnot-match');
+	}
+}
+function insert_client(){
+	$db = new db;
+	$input = new input;
+	$data = array('client_type'=>$input->post('client_type'), 'client_name'=>$input->post('client_name'), 'client_address'=>$input->post('client_address'), 'client_phone'=>$input->post('client_phone'), 'client_email'=>$input->post('client_email'));
+	$db->insert('clients',$data);
+	redirect('/app/clients/');
+}
+function insert_visa(){
+	$db = new db;
+	$insert = new insert;
+}
 ?>

@@ -36,34 +36,36 @@
                             <p class="text-muted m-b-30 font-13">  </p>
                             <div class="row">
                                 <div class="col-sm-12 col-xs-12">
-                                    <form>
+                                    <form method="post" action="/functions/insert/visa/">
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Select client</label>
-                                          <select class="custom-select col-12" id="inlineFormCustomSelect">
-                                        <option selected="">Choose...
-                                        </option><option value="1">B2B                                        </option><option value="2">B2C
-                                        </option><option value="3">B2D
-                                    </option></select>
+                                          <select class="custom-select col-12" id="inlineFormCustomSelect" name="client">
+											  <option selected="" disabled>Choose...</option>
+                                      		<?php
+											  $db = new db;
+											  $data = $db->get('clients','`id`,`client_name`',"WHERE 1");
+											  foreach($data['result'] as $key=>$rw){
+												  echo '<option value="'.$rw[0].'">'.$rw[1].'</option>';
+											  }
+											  ?>
+                                       </select>
                                         </div>
                                             <div class="form-group">
                                             <label for="exampleInputEmail1">Type of visa</label>
-                                          <select class="custom-select col-12" id="inlineFormCustomSelect">
-                                        <option selected="">Choose...
-                                        </option><option value="1">B2B 
-                                        </option></select>
+                                       		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Type of Visa" name="visa_type" required>
                                         </div>
                                         
                                         <div class="row">
                                         <div class="form-group col-md-6 m-t-20">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">sales amount</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="sales amount">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="sales amount" name="sales_amount" required>
                                         </div>
                                         </div>
                                          <div class="form-group col-md-6 m-t-20">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">service charge</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="service charge">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="service charge" name="service_charge" required>
                                         </div>
                                         </div>
                                         </div>
@@ -77,49 +79,49 @@
                                         <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">passport name</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="passport name">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="passport name" name="passport" required>
                                         </div>
                                         </div>
                                          <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">passport no</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="passport no">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="passport no" name="passport_no" required>
                                         </div>
                                         </div>
                                               <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">DOB</label>
-                                            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="DOB">
+                                            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="DOB" name="dob" required>
                                         </div>
                                         </div>
                                          <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">passport expiry (min 6 month  warning)</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="service charge">
+                                            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="service charge" name="service_charge" required>
                                         </div>
                                         </div>
                                               <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">VISA no</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="VISA no">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="VISA no" name="visa_no" required>
                                         </div>
                                         </div>
                                          <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
-                                            <label for="exampleInputEmail1">date</label>
-                                            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="date">
+                                            <label for="exampleInputEmail1">Visa Date</label>
+                                            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="date" name="visa_date" required>
                                         </div>
                                         </div>
                                         <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">id no</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="id no">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="id no" name="id_no" required>
                                         </div>
                                         </div>
                                          <div class="form-group col-md-6 m-t-20" style="margin:0px">
                                          <div class="form-group">
                                             <label for="exampleInputEmail1">profession </label>
-                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="profession ">
+                                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="profession " name="profession" required>
                                         </div>
                                         </div>
                                         
@@ -129,7 +131,6 @@
                                        
                                         
                                         <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
-                                        <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                                     </form>
                                 </div>
                             </div>
