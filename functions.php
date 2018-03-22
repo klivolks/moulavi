@@ -56,6 +56,6 @@ function insert_client(){
 }
 function insert_visa(){
 	$db = new db;
-	$insert = new insert;
+	$input = new input;
 }
 ?>
