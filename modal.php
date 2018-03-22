@@ -13,5 +13,11 @@ elseif($function=='insert'){
 	elseif($section=='visa'){
 		insert_visa();
 	}
+	elseif($section=='ticketing'){
+		insert_ticketing();
+	}
+	elseif($section=='packages'){
+		insert_packages();
+	}
 }
 ?>

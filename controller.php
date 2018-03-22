@@ -82,7 +82,7 @@
 					$load->view('public/footer');
 				}
 			}
-					elseif($subpage=='ticketing'){
+			elseif($subpage=='ticketing'){
 				if($param[3]==''){
 					$load->view('public/meta');
 					$load->view('public/header');

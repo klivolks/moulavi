@@ -57,5 +57,22 @@ function insert_client(){
 function insert_visa(){
 	$db = new db;
 	$input = new input;
+	$data = array('client'=>$input->post('client'), 'visa_type'=>$input->post('visa_type'), 'sales_amount'=>$input->post('sales_amount'), 'service_charge'=>$input->post('service_charge'), 'passport_name'=>$input->post('passport_name'), 'passport_no'=>$input->post('passport_no'), 'dob'=>$input->post('dob'), 'passport_expiry'=>$input->post('passport_expiry'), 'visa_no'=>$input->post('visa_no'), 'visa_date'=>$input->post('visa_date'), 'id_no'=>$input->post('id_no'), 'profession'=>$input->post('profession'));
+	$db->insert('visa',$data);
+	redirect('/app/visa/');
+}
+function insert_ticketing(){
+	$db = new db;
+	$input = new input;
+	$data = array('name'=>$input->post('name'), 'sector'=>$input->post('sector'), 'sales_amount'=>$input->post('sales_amount'), 'flight_no'=>$input->post('flight_no'), 'date_of_travel'=>$input->post('date_of_travel'), 'purchase_amt'=>$input->post('purchase_amt'), 'purchase_agent'=>$input->post('purchase_agent'));
+	$db->insert('ticketing',$data);
+	redirect('/app/ticketing/');
+}
+function insert_packages(){
+	$db = new db;
+	$input = new input;
+	$data = array('tour_name'=>$input->post('tour_name'), 'no_of_seats'=>$input->post('no_of_seats'), 'date_of_travel'=>$input->post('date_of_travel'), 'package_selling_price'=>$input->post('package_selling_price'), 'flight_details'=>$input->post('flight_details'), 'name'=>$input->post('name'), 'passport_no'=>$input->post('passport_no'), 'gender'=>$input->post('gender'), 'dob'=>$input->post('dob'), 'passport_expiry'=>$input->post('passport_expiry'), 'tour_code'=>$input->post('tour_code'), 'purchase_cost'=>$input->post('purchase_cost'), 'ticket'=>$input->post('ticket'), 'stay'=>$input->post('stay'));
+	$db->insert('packages',$data);
+	redirect('/app/tour-packages/');
 }
 ?>
