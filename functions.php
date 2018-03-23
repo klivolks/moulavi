@@ -8,7 +8,6 @@ function authenticate(){
 	$username = $input->post('username');
 	$password = $input->post('password');
 	$data = $db->get('users','`id`,`password`',"WHERE (`username` = '$username' OR `email` = '$username') AND `status` = 1");
-	echo $data['error'];
 	if(isset($data['result'])){
 		if(sha1($password)==$data['result'][0][1])
 		{
