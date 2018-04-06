@@ -2,6 +2,9 @@
 if($function=='authenticate'){
 	authenticate();
 }
+if($function=='logout'){
+	logout();
+}
 elseif($function=='insert'){
 	$section = $param[3];
 	if($section=='admin'){

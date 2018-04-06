@@ -118,6 +118,11 @@
 					$load->view('public/sub-footer');
 					$load->view('public/footer');
 				}
+				elseif($param[3]=='view'){
+
+					$load->view('public/getPackageview');
+
+				}
 			}
 				
 			

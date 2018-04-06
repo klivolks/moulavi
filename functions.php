@@ -8,6 +8,7 @@ function authenticate(){
 	$username = $input->post('username');
 	$password = $input->post('password');
 	$data = $db->get('users','`id`,`password`',"WHERE (`username` = '$username' OR `email` = '$username') AND `status` = 1");
+	echo $data['error'];
 	if(isset($data['result'])){
 		if(sha1($password)==$data['result'][0][1])
 		{
@@ -22,6 +23,11 @@ function authenticate(){
 		redirect('/login/?msg=username-not-found');
 	}
 }
+function logout(){
+    session_unset(); 
+    session_destroy();
+    redirect('/login/');
+}
 function session_check(){
 	$admin = $_SESSION['admin'];
 	$db = new db;
@@ -34,11 +40,41 @@ function session_check(){
 		return false;
 	}
 }
+function user_name(){
+	$admin = $_SESSION['admin'];
+	$db = new db;
+	$data = $db->get('users','`id`,`name`,`email`',"WHERE `id` = '$admin' AND `status`=1");
+	$userData = array(
+            'Name' => $data['result'][0][1],
+            'Email' => $data['result'][0][2],
+        );
+    return json_encode($userData);
+}
+function totalClients(){
+    $db = new db;
+	$data = $db->get('clients','count(*)',NULL);
+	echo  $data['result'][0][0];
+}
+function totalVisa(){
+    $db = new db;
+	$data = $db->get('visa','count(*)',NULL);
+	echo  $data['result'][0][0];
+}
+function totalTickets(){
+    $db = new db;
+	$data = $db->get('ticketing','count(*)',NULL);
+	echo  $data['result'][0][0];
+}
+function totalPackages(){
+    $db = new db;
+	$data = $db->get('packages','count(*)',NULL);
+	echo  $data['result'][0][0];
+}
 function insert_admin(){
 	$db = new db;
 	$input = new input;
 	if($input->post('password')==$input->post('retype_password')){
-		$data = array('username'=>$input->post('username'), 'password'=>sha1($input->post('password')), 'email'=>$input->post('email'), 'status'=>1);
+		$data = array('username'=>$input->post('username'),'name'=>$input->post('name'), 'password'=>sha1($input->post('password')), 'email'=>$input->post('email'), 'status'=>1);
 		$id=$db->insert('users',$data);
 		redirect('/app/admins/');
 	}
