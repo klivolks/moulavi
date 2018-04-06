@@ -12,9 +12,6 @@
                 <li class="breadcrumb-item active">visa</li>
             </ol>
         </div>
-        <div>
-            <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
-        </div>
     </div>
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
@@ -22,10 +19,7 @@
     <!-- ============================================================== -->
     <!-- Container fluid  -->
     <!-- ============================================================== -->
-    <div class="container-fluid">
-        <div class="card-body">
-        </div>
-    </div>
+
     <div class="container-fluid">
         <!-- ============================================================== -->
         <!-- Start Page Content -->

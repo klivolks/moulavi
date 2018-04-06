@@ -13,9 +13,7 @@
                         <li class="breadcrumb-item active">Add Admins</li>
                     </ol>
                 </div>
-                <div>
-                    <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
-                </div>
+                
             </div>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
@@ -41,6 +39,10 @@
                                             <label for="exampleInputEmail1">User Name</label>
                                             <input type="text" class="form-control" name="username" id="exampleInputEmail1" placeholder="User Name" required>
                                         </div>
+                                         <div class="form-group">
+                                            <label for="exampleInputEmail1">Name</label>
+                                            <input type="text" class="form-control" name="uname" id="exampleInputEmail1" placeholder="name" required>
+                                        </div>                                       
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Password</label>
                                             <input type="password" class="form-control" name="password" id="exampleInputEmail1" placeholder="password" required>

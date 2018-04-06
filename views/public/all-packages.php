@@ -12,9 +12,6 @@
                 <li class="breadcrumb-item active">All Packages</li>
             </ol>
         </div>
-        <div>
-            <button class="right-side-toggle waves-effect waves-light btn-inverse btn btn-circle btn-sm pull-right m-l-10"><i class="ti-settings text-white"></i></button>
-        </div>
     </div>
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
@@ -23,103 +20,38 @@
     <!-- Container fluid  -->
     <!-- ============================================================== -->
     <div class="container-fluid">
-        <div class="card-body">
-        </div>
-    </div>
-    <div class="container-fluid">
         <!-- ============================================================== -->
         <!-- Start Page Content -->
         <!-- ============================================================== -->
         <!-- Row -->
         <div class="card">
             <div class="card-body">
-                <div class="table-responsive">
-                    <p style="color:blue;font-weight:600">Entry</p>
-                    <table class="table">
+                <div class="table-responsive m-t-40">
+                    <table id="myTable" class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th>No.</th>
+                                <th>Name</th>
                                 <th>Tour name</th>
-                                <th>No of seats</th>
+                                <th>Passport no</th>
                                 <th>Date of travel</th>
-                                <th>Flight details</th>
-                                <th>Packages selling price</th>
+                                <th>View</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             $db = new db;
-                            $data = $db->get('packages','`tour_name`,`no_of_seats`,`date_of_travel`,`package_selling_price`,`flight_details`',"WHERE 1 ORDER BY `id` DESC");
+                            $data = $db->get('packages','`id`,`tour_name`,`name`,`date_of_travel`,`passport_no`',"WHERE 1 ORDER BY `id` DESC");
                             $i=1;
                             foreach($data['result'] as $key=>$entry):
                             ?>
                             <tr>
                                 <td><?php echo $i; $i++; ?></td>
+                                <td><?php echo $entry['name']; ?></td>
                                 <td><?php echo $entry['tour_name']; ?></td>
-                                <td><?php echo $entry['no_of_seats']; ?> </td>
+                                <td><?php echo $entry['passport_no']; ?></td>
                                 <td><?php echo $entry['date_of_travel']; ?></td>
-                                <td><?php echo $entry['flight_details']; ?></td>
-                                <td><?php echo $entry['package_selling_price']; ?></td>
-                            </tr>
-                            <?php
-                            endforeach;
-                            ?>
-                        </tbody>
-                    </table>
-                    <p style="color:blue;font-weight:600">Booking</p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>No.</th>
-                                <th>Name</th>
-                                <th>Passport no</th>
-                                <th>Gender</th>
-                                <th>DOB</th>
-                                <th>Passport of expiry</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $data = $db->get('packages','`name`,`passport_no`,`gender`,`dob`,`passport_expiry`',"WHERE 1 ORDER BY `id` DESC");
-                            $i=1;
-                            foreach($data['result'] as $key=>$booking):
-                            ?>
-                            <tr>
-                                <td><?php echo $i; $i++; ?></td>
-                                <td><?php echo $booking['name']; ?></td>
-                                <td><?php echo $booking['passport_no']; ?> </td>
-                                <td><?php echo ($booking['gender']=='m') ? "Male": "Female"; ?></td>
-                                <td><?php echo $booking['dob']; ?></td>
-                                <td><?php echo $booking['passport_expiry']; ?></td>
-                            </tr>
-                            <?php
-                            endforeach;
-                            ?>
-                        </tbody>
-                    </table>
-                    <p style="color:blue;font-weight:600">Tour purchase</p>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>No.</th>
-                                <th>Tour code</th>
-                                <th>Purchase visa /cost</th>
-                                <th>Ticket</th>
-                                <th>Stay </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $data = $db->get('packages','`tour_code`,`purchase_cost`,`ticket`,`stay`',"WHERE 1 ORDER BY `id` DESC");
-                            $i=1;
-                            foreach($data['result'] as $key=>$entry):
-                            ?>
-                            <tr>
-                                <td><?php echo $i; $i++; ?></td>
-                                <td><?php echo $entry['tour_code']; ?></td>
-                                <td><?php echo $entry['purchase_cost']; ?> </td>
-                                <td><?php echo $entry['ticket']; ?></td>
-                                <td><?php echo $entry['stay']; ?></td>
+                                <td><a href="javascript:void(0)" class="dt-button buttons-print" id="getPackageview" tabindex="0" aria-controls="example23" data-toggle="modal" data-target=".bs-example-modal-lg" data-id="<?php echo $entry['id']; ?>"><span>View</span></a> <!-- <a class="dt-button buttons-print" tabindex="0" aria-controls="example23" href="/app/tour-packages/view?packageid=<?php// echo $entry['id']; ?>"><span>View</span></a>--></td>
                             </tr>
                             <?php
                             endforeach;
@@ -134,4 +66,22 @@
 </div>
 </div>
 </div>
-</div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myLargeModalLabel">Package Details</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="dynamic-content"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger waves-effect text-left" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>

@@ -13,7 +13,7 @@
         <link href="/assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
         <!-- Bootstrap Core CSS -->
         <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="assets/plugins/morrisjs/morris.css" rel="stylesheet" />
+        <link href="/assets/plugins/morrisjs/morris.css" rel="stylesheet" />
         <!-- Custom CSS -->
         <link href="/css/style.css" rel="stylesheet" />
         <!-- You can change the theme colors from here -->
